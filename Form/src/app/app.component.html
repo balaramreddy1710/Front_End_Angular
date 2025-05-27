@@ -1,0 +1,48 @@
+<h1>Form</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="firstName">First Name</label>
+    <input type="text" formControlName="firstName" placeholder="First Name" />
+    <div *ngIf="f['firstName'].touched && f['firstName'].invalid">
+      <small>First name is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="lastName">Last Name</label>
+    <input type="text" formControlName="lastName" placeholder="Last Name" />
+    <div *ngIf="f['lastName'].touched && f['lastName'].invalid">
+      <small>Last name is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" formControlName="email" placeholder="Email" />
+    <div *ngIf="f['email'].touched && f['email'].invalid">
+      <small *ngIf="f['email'].errors && f['email'].errors['required']">
+        Email is required.
+      </small>
+      <small *ngIf="f['email'].errors && f['email'].errors['email']">
+        Enter a valid email.
+      </small>
+    </div>
+  </div>
+
+  <div>
+    <label for="gender">Gender</label>
+    <select formControlName="gender">
+      <option value="" disabled selected>Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+    <div *ngIf="f['gender'].touched && f['gender'].invalid">
+      <small>Gender is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
