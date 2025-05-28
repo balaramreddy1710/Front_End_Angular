@@ -1,0 +1,48 @@
+<!-- <h1>Directives</h1>
+
+<h2>ngFor</h2>
+<ul>
+  <li *ngFor="let movie of movies">
+    {{ movie }}
+  </li>
+</ul>
+
+<h2>Index</h2>
+<ul>
+  <li *ngFor="let movie of movies; let i = index">{{ i + 1 }} {{ movie }}</li>
+</ul>
+
+<h2>First and Last</h2>
+<ul>
+  <li *ngFor="let movie of movies; let First = first; let Last = last">
+    <strong *ngIf="First">First : </strong>
+    <strong *ngIf="Last">Last : </strong>
+    {{ movie }}
+  </li>
+</ul>
+
+<h2>Even and Odd using ngClass</h2>
+<ul>
+  <li
+    *ngFor="let movie of movies; let Even = even; let Odd = odd"
+    [ngClass]="{ 'even-item': Even, 'odd-item': Odd }"
+  >
+    {{ movie }}
+  </li>
+</ul>
+
+<strong>Toggle</strong>
+<input type="checkbox" [(ngModel)]="showMe" />
+<h2 *ngIf="showMe">This is ngIf</h2>
+
+<h2>ngStyles</h2>
+<ul>
+  <li
+    *ngFor="let movie of movies"
+    [ngStyle]="{ color: 'red', 'font-size': '20px' }"
+  >
+    {{ movie }}
+  </li>
+</ul> -->
+
+<app-custom></app-custom>
