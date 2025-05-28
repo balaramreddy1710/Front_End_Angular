@@ -1,0 +1,5 @@
+<h1>User Info</h1>
+<p><strong>Name:</strong> {{ user.name }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Status:</strong> {{ user.isActive ? "Active" : "Inactive" }}</p>
+<button (click)="toggleStatus()">Toggle Status</button>
