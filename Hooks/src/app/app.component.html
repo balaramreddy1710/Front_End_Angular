@@ -16,4 +16,8 @@
 </app-after>
 
 <h3>ngAfterViewInit</h3>
+@if(showHello){
 <app-afterview></app-afterview>
+}
+
+<input type="checkbox" [(ngModel)]="showHello" />

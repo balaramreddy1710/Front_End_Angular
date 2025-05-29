@@ -57,4 +57,6 @@ export class AppComponent implements OnInit, DoCheck {
       this.prevData = this.data;
     }
   }
+
+  showHello = true;
 }
