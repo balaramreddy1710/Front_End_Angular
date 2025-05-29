@@ -2,3 +2,11 @@
 <h3>ngOnChange</h3>
 <input type="text" [(ngModel)]="title" name="title" />
 <app-change [items]="itemList" [title]="title"></app-change>
+
+<h3>ngOnInit</h3>
+<p>Message : {{ message }}</p>
+
+<h3>ngDoCheck</h3>
+<input type="text" name="data" [(ngModel)]="data" />
+
+<h3>ngAfterContentInit</h3>
