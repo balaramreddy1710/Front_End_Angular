@@ -3,10 +3,17 @@ import { RouterOutlet } from '@angular/router';
 import { ChangeComponent } from './change/change.component';
 import { FormsModule } from '@angular/forms';
 import { AfterComponent } from './after/after.component';
+import { AfterviewComponent } from './afterview/afterview.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ChangeComponent, FormsModule, AfterComponent],
+  imports: [
+    RouterOutlet,
+    ChangeComponent,
+    FormsModule,
+    AfterComponent,
+    AfterviewComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
