@@ -10,10 +10,9 @@ import { ListComponent } from './list/list.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  carNames: string[] = [];
-
-  onCarAdded(carName: string) {
-    console.log(carName, 'From App');
-    this.carNames.push(carName);
-  }
+  // carNames: string[] = [];
+  // onCarAdded(carName: string) {
+  //   console.log(carName, 'From App');
+  //   this.carNames.push(carName);
+  // }
 }
