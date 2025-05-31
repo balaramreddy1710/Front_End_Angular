@@ -1,0 +1,59 @@
+<form class="form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <h1>Form</h1>
+  <div class="input">
+    <input
+      type="text"
+      name="firstName"
+      formControlName="firstName"
+      placeholder="First Name"
+    />
+    <small
+      *ngIf="
+        userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched
+      "
+      >*First Name is required</small
+    >
+  </div>
+
+  <div class="input">
+    <input
+      type="text"
+      name="lastName"
+      formControlName="lastName"
+      placeholder="Last Name"
+    />
+    <small
+      *ngIf="
+        userForm.get('lastName')?.invalid && userForm.get('lastName')?.touched
+      "
+      >*Last Name is required</small
+    >
+  </div>
+
+  <div class="input">
+    <input
+      type="email"
+      name="email"
+      formControlName="email"
+      placeholder="Email"
+    />
+    <small
+      *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched"
+      >*Email is required</small
+    >
+  </div>
+
+  <div class="input">
+    <input
+      type="date"
+      name="dob"
+      formControlName="dob"
+      placeholder="Date of Birth"
+    />
+    <small *ngIf="userForm.get('dob')?.invalid && userForm.get('dob')?.touched"
+      >*Date of Birth is required</small
+    >
+  </div>
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>
