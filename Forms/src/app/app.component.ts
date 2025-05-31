@@ -1,12 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
-  FormBuilder,
   FormGroup,
   Validators,
   ReactiveFormsModule,
   FormControl,
 } from '@angular/forms';
+import {
+  dateOfBirthValidator,
+  emailValidator,
+} from './validators/custom-validators';
 
 @Component({
   selector: 'app-root',
@@ -21,8 +24,12 @@ export class AppComponent implements OnInit {
     this.userForm = new FormGroup({
       firstName: new FormControl(null, Validators.required),
       lastName: new FormControl(null, Validators.required),
-      email: new FormControl(null, [Validators.required, Validators.email]),
-      dob: new FormControl(null),
+      email: new FormControl(null, [
+        Validators.required,
+        Validators.email,
+        emailValidator,
+      ]),
+      dob: new FormControl(null, dateOfBirthValidator),
     });
   }
 

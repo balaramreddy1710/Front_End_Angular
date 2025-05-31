@@ -50,8 +50,12 @@
       formControlName="dob"
       placeholder="Date of Birth"
     />
-    <small *ngIf="userForm.get('dob')?.invalid && userForm.get('dob')?.touched"
-      >*Date of Birth is required</small
+    <small
+      *ngIf="
+        userForm.get('dob')?.hasError('dobInvalid') &&
+        userForm.get('dob')?.touched
+      "
+      >*Date of Birth is should be lower than the current date</small
     >
   </div>
 
